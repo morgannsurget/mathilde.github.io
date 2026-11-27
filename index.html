@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matériel Paysage — Boutique professionnelle</title>
+  <meta name="description" content="Sélection d'outils et de matériel pour paysagistes professionnels.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#" aria-label="Accueil"><span>MP</span> Matériel Paysage</a>
+    <nav aria-label="Navigation principale">
+      <a href="#produits">Produits</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" id="cartButton" type="button" aria-label="Ouvrir le panier">
+      Panier <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">ÉQUIPEMENT PRO</p>
+        <h1>Le bon outil pour chaque terrain.</h1>
+        <p>Du matériel fiable pour préparer, planter, entretenir et transformer les espaces verts.</p>
+        <a class="button" href="#produits">Découvrir la boutique</a>
+      </div>
+      <div class="hero-card" aria-label="Conseil professionnel">
+        <strong>Besoin d'un conseil ?</strong>
+        <span>Notre équipe vous aide à choisir l'outil adapté à votre chantier.</span>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Nos engagements">
+      <span>✓ Livraison suivie</span>
+      <span>✓ Produits professionnels</span>
+      <span>✓ Retours sous 30 jours</span>
+      <span>✓ Paiement sécurisé</span>
+    </section>
+
+    <section class="catalog" id="produits">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">NOTRE SÉLECTION</p>
+          <h2>Produits essentiels</h2>
+        </div>
+        <div class="filters" id="filters" aria-label="Filtrer les produits">
+          <button class="active" type="button" data-category="Tous">Tous</button>
+          <button type="button" data-category="Outils">Outils</button>
+          <button type="button" data-category="Arrosage">Arrosage</button>
+          <button type="button" data-category="Protection">Protection</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="services" id="services">
+      <article><span>01</span><h3>Conseil chantier</h3><p>Une sélection adaptée à vos usages, à votre équipe et à votre budget.</p></article>
+      <article><span>02</span><h3>Préparation rapide</h3><p>Commande vérifiée et préparée avec soin par des spécialistes.</p></article>
+      <article><span>03</span><h3>Équipement durable</h3><p>Des références choisies pour résister aux exigences du terrain.</p></article>
+    </section>
+
+    <section class="cta" id="contact">
+      <div><p class="eyebrow">UN PROJET À ÉQUIPER ?</p><h2>Parlons matériel.</h2></div>
+      <a class="button light" href="mailto:contact@example.com">Nous contacter</a>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Matériel Paysage</span><span>Site vitrine · Boutique locale</span></footer>
+
+  <aside class="drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-header"><h2>Votre panier</h2><button id="closeCart" type="button" aria-label="Fermer">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer"><div><span>Total</span><strong id="cartTotal">0,00 €</strong></div><button id="checkoutButton" type="button">Demander un devis</button></div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
